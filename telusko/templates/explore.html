@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ dest.name }} - Details</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f7fa;
+            margin: 0;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+        img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+        h3 {
+            color: #28a745;
+            margin-bottom: 1rem;
+        }
+        p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        strong {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>{{ dest.name }}</h1>
+        <img src="{{ dest.img.url }}" alt="{{ dest.name }}">
+        <h3>Price: Rs. {{ dest.price }}</h3>
+        <p><strong>General Info:</strong> {{ dest.desc }}</p>
+        <p><strong>Custom Description:</strong> {{ dest.custom_desc }}</p>
+    </div>
+</body>
+</html>
